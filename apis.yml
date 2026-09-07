@@ -1,8 +1,22 @@
 aid: advancedmaterialstechnologyengineering
-name: Advancedmaterialstechnologyengineering
-description: 'Advancedmaterialstechnologyengineering is a company surfaced via the API Evangelist harvest
-  backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+name: Advanced Materials Technology & Engineering
+description: 'Advanced Materials Technology & Engineering, Inc. (AMTE; Chinese entity 无锡邑文微电子科技股份有限公司,
+  Wuxi Yiwen Microelectronics Technology / 邑文科技) is a Chinese semiconductor capital-equipment maker
+  founded in 2011 and headquartered at No. 1 Guanshan Road, Wuxi, Jiangsu, with a production center
+  at No. 1 Jinshan Road, Rudong, Nantong that runs more than 2,000 square meters of class-10,000
+  cleanroom plus a class-1,000 specialty-gas process laboratory. AMTE designs and manufactures
+  front-end wafer-fabrication equipment — plasma etch systems and thin-film deposition (PECVD)
+  systems — for IC and OSD production, with a stated focus on compound semiconductor, MEMS and
+  advanced-packaging process lines; the company says its tools qualified into 12-inch fabs including
+  SMIC and SK Hynix from 2016-2017, and it holds Chinese national high-tech enterprise status (2017)
+  and ISO 9001 certification (2015). It raised a Series D of more than RMB 550 million (about USD
+  70.5 million) in 2024, co-led by CICC Capital and a Haitong Securities alternative-investment
+  vehicle, and its shares appear on the EquityZen secondary marketplace, which is how the company
+  entered the API Evangelist harvest backlog. AMTE sells physical process equipment, refurbished
+  tools, spare parts and field service — not software. It operates no developer program, publishes
+  no public API, and serves no machine-readable API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/advancedmaterialstechnologyengineering/refs/heads/main/apis.yml
+image: https://www.amteglobal.cn/Public/bnimg/5f4c4e4d5825a.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,12 +26,79 @@ created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
-apis: []
+- Semiconductors
+- Semiconductor Equipment
+- Wafer Fabrication
+- Thin Film Deposition
+- Plasma Etch
+- MEMS
+- Compound Semiconductors
+- Advanced Packaging
+- Manufacturing
+- Industrial Hardware
+- China
+apis:
+- name: AMTE Business Object OpenAPI (H3 Yun / 氚云 low-code BPM platform)
+  description: >-
+    A single anonymously-readable OpenAPI 3.0.1 document served from AMTE's own
+    openapi.amteglobal.cn subdomain, describing one operation — POST
+    /api/Object/LoadBizObjects — that pages business-object (form) records out of a low-code
+    BPM/workflow engine. The parameter vocabulary (EngineCode, EngineSecret, SchemaCode,
+    pageIndex, pageSize) and the MyResult/JsonResult envelope are the published integration
+    contract of the Chinese low-code BPM platform H3 Yun (氚云, Aozhe/H3), so this is a vendor
+    platform AMTE OPERATES as a tenant, not an API AMTE designed or markets. There is no
+    developer portal, no signup, no documentation page and no publicly advertised program
+    behind it: the contract was found only by resolving the openapi.* subdomain during STEP 0b
+    contract discovery. Auth is a JWT bearer token declared in components.securitySchemes and
+    applied globally; the Swagger UI at the host root is additionally wrapped in a
+    username/password overlay, which no artifact here attempts to pass.
+  humanURL: http://openapi.amteglobal.cn/index.html
+  x-source-url: http://openapi.amteglobal.cn/swagger/Default/swagger.json
+  x-source-fetched: '2026-09-07'
+  x-source-http-status: 200
+  baseURL: http://openapi.amteglobal.cn
+  position: Producing
+  x-operator: tenant
+  x-operator-note: >-
+    Host and deployment are AMTE's (dedicated A record openapi.amteglobal.cn -> 36.139.38.21,
+    separate from the 139.196.221.218 marketing site). The contract's shape is the H3 Yun / 氚云
+    platform's, not AMTE's. STEP 0c ownership check: the document makes no claim about any other
+    company — info.title is the Swashbuckle default "Default", there is no servers[], no
+    info.contact and no info.termsOfService — so nothing in it contradicts the AMTE-controlled
+    host it is served from. It is recorded as a tenant surface rather than an AMTE product API.
+  tags:
+  - Low Code
+  - Business Process Management
+  - Workflow
+  - Enterprise Integration
+  - Semiconductors
+  properties:
+  - type: OpenAPI
+    url: openapi/advancedmaterialstechnologyengineering-openapi.json
+  - type: Authentication
+    url: authentication/advancedmaterialstechnologyengineering-authentication.yml
+  - type: Conventions
+    url: conventions/advancedmaterialstechnologyengineering-conventions.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/advancedmaterialstechnologyengineering-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/advancedmaterialstechnologyengineering
+  url: https://www.amteglobal.cn/
+- type: Blog
+  url: https://www.amteglobal.cn/enews/31.html
+- type: Support
+  url: https://www.amteglobal.cn/econtact/32.html
+- type: Plans
+  url: plans/advancedmaterialstechnologyengineering-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/advancedmaterialstechnologyengineering-rate-limits.yml
+x-enrichment:
+  date: '2026-09-07'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v3

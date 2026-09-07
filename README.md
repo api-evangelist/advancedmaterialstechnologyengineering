@@ -1,4 +1,4 @@
-# Advancedmaterialstechnologyengineering
+# Advanced Materials Technology & Engineering
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,27 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Advancedmaterialstechnologyengineering is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/advancedmaterialstechnologyengineering
+Advanced Materials Technology & Engineering, Inc. (AMTE; 无锡邑文微电子科技股份有限公司 / 邑文科技) is a Chinese
+semiconductor capital-equipment manufacturer founded in 2011, headquartered in Wuxi, Jiangsu, with a
+production center in Rudong, Nantong. It builds front-end wafer-fabrication equipment — plasma etch
+and thin-film deposition (PECVD) systems — for IC/OSD, compound-semiconductor, MEMS and
+advanced-packaging process lines. It was surfaced via the API Evangelist harvest backlog
+(source: secondary-market).
+
+**AMTE runs no developer program.** It sells physical process equipment, refurbished tools, spare
+parts and field service; the corporate site at `amteglobal.cn` has no developer, docs, portal or
+API section anywhere in its nav, its footer, or its 521-URL sitemap, and every OpenAPI, GraphQL,
+MCP, A2A and `/.well-known/` path probed there returns a hard 404 (negative control confirmed).
+
+**One machine-readable contract does exist, and it is a tenant surface, not a product API.**
+STEP 0b contract discovery resolved `openapi.amteglobal.cn` — a dedicated A record on a separate
+IP from the marketing site — and found a real, anonymously readable OpenAPI 3.0.1 at
+`http://openapi.amteglobal.cn/swagger/Default/swagger.json`. It declares a single operation,
+`POST /api/Object/LoadBizObjects`, whose parameter vocabulary (`EngineCode`, `EngineSecret`,
+`SchemaCode`, `pageIndex`, `pageSize`) and `MyResult`/`JsonResult` envelope are the published
+integration contract of the Chinese low-code BPM platform **H3 Yun (氚云)**. AMTE operates the
+deployment; the contract's shape is the platform vendor's. It is recorded here with
+`x-operator: tenant` rather than as an API AMTE designed, markets or supports.
+
+- https://www.amteglobal.cn/
+- https://equityzen.com/company/advancedmaterialstechnologyengineering (secondary-market listing; not a company website)

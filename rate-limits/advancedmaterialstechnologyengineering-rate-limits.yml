@@ -1,0 +1,13 @@
+generated: '2026-09-07'
+method: searched
+source: openapi/advancedmaterialstechnologyengineering-openapi.json
+note: >-
+  No rate limits are published. AMTE operates no developer documentation in which limits could be
+  stated, and the single published contract declares only a 200 response — no 429, no Retry-After,
+  and no X-RateLimit-*/RateLimit-* response headers anywhere in the document. Nothing was observed
+  on the wire either: the pipeline sends no unauthenticated calls to a tenant system. An honest
+  zero, recorded rather than omitted.
+limit_count: 0
+rate_limits: []
+headers: []
+exhaustion_status: null

@@ -1,0 +1,89 @@
+generated: '2026-09-07'
+method: derived
+source: openapi/advancedmaterialstechnologyengineering-openapi.json
+note: >-
+  Derived from the one operation AMTE's openapi.amteglobal.cn host publishes. AMTE operates no
+  developer portal, so there is no prose documentation to search and every statement below is read
+  straight out of the contract. Nothing is asserted that the spec does not state.
+authentication:
+  style: bearer-jwt
+  detail: >-
+    components.securitySchemes.Bearer — type http, scheme bearer, bearerFormat JWT, described as
+    "JWT Authorization header using the Bearer scheme." Applied globally via a root-level
+    security: [{Bearer: []}]. In addition the operation itself takes EngineCode and EngineSecret
+    as query parameters, which is the H3 Yun / 氚云 platform's own tenant-credential pair — a
+    second, spec-declared credential carried in the URL rather than a header.
+  source: openapi/advancedmaterialstechnologyengineering-openapi.json
+pagination:
+  style: page-number
+  params:
+  - name: pageIndex
+    in: query
+    type: integer
+  - name: pageSize
+    in: query
+    type: integer
+  response_fields: []
+  note: >-
+    Page-number pagination is declared on the parameters, but the response schema
+    (MyResult_JsonResult) carries no total, cursor or next-page field, so a caller cannot tell
+    from the contract when the last page has been reached.
+error_envelope:
+  format: custom
+  rfc9457: false
+  schema: MyResult_JsonResult
+  fields:
+  - name: Successful
+    type: boolean
+  - name: ErrorMessage
+    type: object
+    nullable: true
+  - name: Logined
+    type: boolean
+  - name: ReturnData
+    type: JsonResult
+  - name: DataType
+    type: integer
+  note: >-
+    Errors are signalled inside a 200 envelope rather than by HTTP status: the only declared
+    response is 200 Success, and failure is expressed by Successful=false plus ErrorMessage. No
+    4xx or 5xx response is declared anywhere in the contract, and no problem+json media type is
+    used. An agent cannot distinguish an auth failure from an empty result by status code alone.
+idempotency:
+  coverage: na
+  scope: []
+  note: >-
+    Not applicable — the published surface has no write operation. The single operation,
+    LoadBizObjects, is a read that is transported over POST, so there is nothing to replay-protect.
+    No Idempotency-Key header, request-id or de-duplication mechanism appears anywhere in the
+    contract.
+reversibility:
+  grade: na
+  note: >-
+    Not applicable — read-only published surface. There is no create, update or delete operation
+    in the contract, so there is no action to reverse and no window to state. Recorded as `na`
+    rather than scored zero, per the pipeline's read-only rule.
+  reversals: []
+dry_run_mode:
+  supported: na
+  note: Not applicable — no write surface to rehearse.
+request_tracing:
+  supported: false
+  note: No request-id, correlation-id or trace header is declared in the contract.
+versioning:
+  scheme: document-only
+  current: 1.0.0
+  note: >-
+    info.version is 1.0.0 and the path carries no version segment. No versioning, deprecation or
+    sunset policy is published anywhere on the host.
+rate_limit_signalling:
+  documented: false
+  note: See rate-limits/advancedmaterialstechnologyengineering-rate-limits.yml — none published.
+field_expansion:
+  supported: false
+metadata:
+  supported: false
+cross_links:
+- authentication/advancedmaterialstechnologyengineering-authentication.yml
+- rate-limits/advancedmaterialstechnologyengineering-rate-limits.yml
+- plans/advancedmaterialstechnologyengineering-plans-pricing.yml

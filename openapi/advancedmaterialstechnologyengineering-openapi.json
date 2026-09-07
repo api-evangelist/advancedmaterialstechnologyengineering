@@ -1,0 +1,146 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Default",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/Object/LoadBizObjects": {
+      "post": {
+        "tags": [
+          "Object"
+        ],
+        "operationId": "api-Object-LoadBizObjects-Post",
+        "parameters": [
+          {
+            "name": "EngineCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EngineSecret",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SchemaCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MyResult_JsonResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MyResult_JsonResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MyResult_JsonResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "JsonResult": {
+        "type": "object",
+        "properties": {
+          "ContentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "SerializerSettings": {
+            "additionalProperties": false,
+            "nullable": true
+          },
+          "StatusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Value": {
+            "additionalProperties": false,
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MyResult_JsonResult": {
+        "type": "object",
+        "properties": {
+          "Successful": {
+            "type": "boolean"
+          },
+          "ErrorMessage": {
+            "additionalProperties": false,
+            "nullable": true
+          },
+          "Logined": {
+            "type": "boolean"
+          },
+          "ReturnData": {
+            "$ref": "#/components/schemas/JsonResult"
+          },
+          "DataType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ],
+  "tags": [
+    {
+      "name": "Object"
+    }
+  ]
+}

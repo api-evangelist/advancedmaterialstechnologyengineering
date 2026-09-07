@@ -1,0 +1,95 @@
+generated: '2026-09-07'
+method: probed
+source: live GET probes of /.well-known/* on every host AMTE resolves on
+note: >-
+  Recorded absence. AMTE (amteglobal.cn) serves no /.well-known document of any kind. The company
+  runs a single web host, www.amteglobal.cn (Alibaba Cloud, 139.196.221.218), on nginx in front of a
+  ThinkPHP application; the apex amteglobal.cn 301s to www. Every /.well-known path probed is
+  answered directly by nginx with a hard 404 and a constant 548-byte "404 Not Found" body, and every
+  application-routed path is answered with the ThinkPHP 404 page at a constant 541 bytes — two
+  distinct, genuinely negative 404 bodies, not a catch-all. The second corporate domain,
+  amteglobal.com, is used only for mail: it publishes NetEase MX records and no A record at all, so
+  there is no web surface on it to probe. A third host, openapi.amteglobal.cn, WAS found during
+  STEP 0b contract discovery (a dedicated A record on a separate IP serving a real OpenAPI 3.0.1)
+  and was probed on the same path list — it too serves no /.well-known document, answering every
+  path with an empty-bodied hard 404. No WellKnown and no SecurityTxt pointer is emitted in
+  apis.yml, because not one of these probes returned a real document.
+hit_count: 0
+hosts:
+- host: https://www.amteglobal.cn
+  soft_404_control:
+    path: /zz-api-evangelist-control-93a1
+    status: 404
+    bytes: 541
+    verdict: >-
+      Negative control passed. A path that cannot exist returns a genuine HTTP 404, so this host has
+      no catch-all and every 404 recorded below is a real absence rather than a soft-404.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/mcp.json
+    status: 404
+- host: https://amteglobal.cn
+  note: apex; 301 redirects to https://www.amteglobal.cn
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: http://openapi.amteglobal.cn
+  note: >-
+    The API host found by STEP 0b contract discovery. Serves an OpenAPI 3.0.1 at
+    /swagger/Default/swagger.json over HTTP; HTTPS on the same host serves an unrelated
+    kkFileView document-preview application. Probed on the same /.well-known path list.
+  soft_404_control:
+    path: /zz-control-nonexistent-7731
+    status: 404
+    bytes: 0
+    verdict: >-
+      Negative control passed. A path that cannot exist returns a genuine 404 with an empty body,
+      matching every /.well-known 404 below, so this host has no catch-all either.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://amteglobal.com
+  note: >-
+    Mail-only domain (MX hzmx01/hzmx02.mxmail.netease.com, NS dns29/dns30.hichina.com). No A record
+    resolves for amteglobal.com or www.amteglobal.com, so no HTTP probe is possible and none is
+    claimed here.
+  documents: []

@@ -1,0 +1,12 @@
+generated: '2026-09-07'
+method: searched
+source: https://www.amteglobal.cn/
+note: >-
+  AMTE publishes no API pricing of any kind. It is a semiconductor capital-equipment manufacturer
+  that quotes tools, refurbished equipment, spare parts and field service through sales contact
+  (phone 0510-85119178, mail 100@amteglobal.com); the corporate site's full 521-URL sitemap
+  contains no pricing, plans, billing or subscription page, and the one machine-readable surface
+  found — the tenant BPM contract at openapi.amteglobal.cn — is an internal integration endpoint
+  with no commercial packaging attached to it. An honest zero, not an unchecked field.
+plan_count: 0
+plans: []
