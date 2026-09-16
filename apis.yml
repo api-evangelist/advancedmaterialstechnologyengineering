@@ -38,43 +38,17 @@ tags:
 - Industrial Hardware
 - China
 apis:
-- name: AMTE Business Object OpenAPI (H3 Yun / 氚云 low-code BPM platform)
+- aid: advancedmaterialstechnologyengineering:advancedmaterialstechnologyengineering-object-api
+  name: Advanced Materials Technology & Engineering Object API
   description: >-
-    A single anonymously-readable OpenAPI 3.0.1 document served from AMTE's own
-    openapi.amteglobal.cn subdomain, describing one operation — POST
-    /api/Object/LoadBizObjects — that pages business-object (form) records out of a low-code
-    BPM/workflow engine. The parameter vocabulary (EngineCode, EngineSecret, SchemaCode,
-    pageIndex, pageSize) and the MyResult/JsonResult envelope are the published integration
-    contract of the Chinese low-code BPM platform H3 Yun (氚云, Aozhe/H3), so this is a vendor
-    platform AMTE OPERATES as a tenant, not an API AMTE designed or markets. There is no
-    developer portal, no signup, no documentation page and no publicly advertised program
-    behind it: the contract was found only by resolving the openapi.* subdomain during STEP 0b
-    contract discovery. Auth is a JWT bearer token declared in components.securitySchemes and
-    applied globally; the Swagger UI at the host root is additionally wrapped in a
-    username/password overlay, which no artifact here attempts to pass.
+    The Object API from Advanced Materials Technology & Engineering — 1 operation(s) for object.
   humanURL: http://openapi.amteglobal.cn/index.html
-  x-source-url: http://openapi.amteglobal.cn/swagger/Default/swagger.json
-  x-source-fetched: '2026-09-07'
-  x-source-http-status: 200
   baseURL: http://openapi.amteglobal.cn
-  position: Producing
-  x-operator: tenant
-  x-operator-note: >-
-    Host and deployment are AMTE's (dedicated A record openapi.amteglobal.cn -> 36.139.38.21,
-    separate from the 139.196.221.218 marketing site). The contract's shape is the H3 Yun / 氚云
-    platform's, not AMTE's. STEP 0c ownership check: the document makes no claim about any other
-    company — info.title is the Swashbuckle default "Default", there is no servers[], no
-    info.contact and no info.termsOfService — so nothing in it contradicts the AMTE-controlled
-    host it is served from. It is recorded as a tenant surface rather than an AMTE product API.
   tags:
-  - Low Code
-  - Business Process Management
-  - Workflow
-  - Enterprise Integration
-  - Semiconductors
+  - Object
   properties:
   - type: OpenAPI
-    url: openapi/advancedmaterialstechnologyengineering-openapi.json
+    url: openapi/advancedmaterialstechnologyengineering-object-api-openapi.yml
   - type: Authentication
     url: authentication/advancedmaterialstechnologyengineering-authentication.yml
   - type: Conventions
