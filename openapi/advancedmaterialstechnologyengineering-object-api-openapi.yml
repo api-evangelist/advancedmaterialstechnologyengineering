@@ -1,0 +1,92 @@
+openapi: 3.2.0
+info:
+  title: Default Object API
+  version: 1.0.0
+security:
+- Bearer: []
+tags:
+- name: Object
+paths:
+  /api/Object/LoadBizObjects:
+    post:
+      tags:
+      - Object
+      operationId: api-Object-LoadBizObjects-Post
+      parameters:
+      - name: EngineCode
+        in: query
+        schema:
+          type: string
+      - name: EngineSecret
+        in: query
+        schema:
+          type: string
+      - name: SchemaCode
+        in: query
+        schema:
+          type: string
+      - name: pageIndex
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/MyResult_JsonResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MyResult_JsonResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/MyResult_JsonResult'
+      summary: Api object load biz objects post
+      x-summary-source: derived
+components:
+  schemas:
+    MyResult_JsonResult:
+      type: object
+      properties:
+        Successful:
+          type: boolean
+        ErrorMessage:
+          additionalProperties: false
+        Logined:
+          type: boolean
+        ReturnData:
+          $ref: '#/components/schemas/JsonResult'
+        DataType:
+          type: integer
+          format: int32
+      additionalProperties: false
+    JsonResult:
+      type: object
+      properties:
+        ContentType:
+          type:
+          - string
+          - 'null'
+        SerializerSettings:
+          additionalProperties: false
+        StatusCode:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        Value:
+          additionalProperties: false
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: http
+      description: JWT Authorization header using the Bearer scheme.
+      scheme: bearer
+      bearerFormat: JWT
