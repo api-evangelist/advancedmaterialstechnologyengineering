@@ -1,0 +1,12 @@
+{
+ "url": "http://openapi.amteglobal.cn/swagger/Default/swagger.json",
+ "requested_url": "http://openapi.amteglobal.cn/swagger/Default/swagger.json",
+ "status": 200,
+ "content_type": "application/json;charset=utf-8",
+ "bytes": 3310,
+ "sha256": "5c4d5cc5a92dfc9baed8bb8fd32a0b2741eb24dc6d0cf013a92273435c8fb62e",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the archived file is byte-identical to what the provider serves."
+}
