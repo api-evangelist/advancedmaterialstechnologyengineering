@@ -3,12 +3,9 @@
   "feeds": [
     {
       "source": "https://www.amteglobal.cn/enews/31.html",
-      "feed_url": "https://www.amteglobal.cn/enews/31.html",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "URLError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-10T13:15:00Z"
+  "fetched": "2026-10-17T14:53:57Z"
 }
