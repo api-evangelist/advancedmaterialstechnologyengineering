@@ -64,27 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Advanced Materials Technology & Engineering, Inc. (AMTE; 无锡邑文微电子科技股份有限公司 / 邑文科技) is a Chinese
-semiconductor capital-equipment manufacturer founded in 2011, headquartered in Wuxi, Jiangsu, with a
-production center in Rudong, Nantong. It builds front-end wafer-fabrication equipment — plasma etch
-and thin-film deposition (PECVD) systems — for IC/OSD, compound-semiconductor, MEMS and
-advanced-packaging process lines. It was surfaced via the API Evangelist harvest backlog
-(source: secondary-market).
+Advanced Materials Technology & Engineering, Inc. (AMTE; Chinese entity 无锡邑文微电子科技股份有限公司, Wuxi Yiwen Microelectronics Technology / 邑文科技) is a Chinese semiconductor capital-equipment maker founded in 2011 and headquartered at No. 1 Guanshan Road, Wuxi, Jiangsu, with a production center at No. 1 Jinshan Road, Rudong, Nantong that runs more than 2,000 square meters of class-10,000 cleanroom plus a class-1,000 specialty-gas process laboratory. AMTE designs and manufactures front-end wafer-fabrication equipment — plasma etch systems and thin-film deposition (PECVD) systems — for IC and OSD production, with a stated focus on compound semiconductor, MEMS and advanced-packaging process lines; the company says its tools qualified into 12-inch fabs including SMIC and SK Hynix from 2016-2017, and it holds Chinese national high-tech enterprise status (2017) and ISO 9001 certification (2015). It raised a Series D of more than RMB 550 million (about USD 70.5 million) in 2024, co-led by CICC Capital and a Haitong Securities alternative-investment vehicle, and its shares appear on the EquityZen secondary marketplace, which is how the company entered the API Evangelist harvest backlog. AMTE sells physical process equipment, refurbished tools, spare parts and field service — not software. It operates no developer program, publishes no public API, and serves no machine-readable API contract of any kind.
 
-**AMTE runs no developer program.** It sells physical process equipment, refurbished tools, spare
-parts and field service; the corporate site at `amteglobal.cn` has no developer, docs, portal or
-API section anywhere in its nav, its footer, or its 521-URL sitemap, and every OpenAPI, GraphQL,
-MCP, A2A and `/.well-known/` path probed there returns a hard 404 (negative control confirmed).
+**Areas:** Company · Semiconductors · Semiconductor Equipment · Wafer Fabrication · Thin Film Deposition · Plasma Etch · MEMS · Compound Semiconductors · Advanced Packaging · Manufacturing · Industrial Hardware · China
 
-**One machine-readable contract does exist, and it is a tenant surface, not a product API.**
-STEP 0b contract discovery resolved `openapi.amteglobal.cn` — a dedicated A record on a separate
-IP from the marketing site — and found a real, anonymously readable OpenAPI 3.0.1 at
-`http://openapi.amteglobal.cn/swagger/Default/swagger.json`. It declares a single operation,
-`POST /api/Object/LoadBizObjects`, whose parameter vocabulary (`EngineCode`, `EngineSecret`,
-`SchemaCode`, `pageIndex`, `pageSize`) and `MyResult`/`JsonResult` envelope are the published
-integration contract of the Chinese low-code BPM platform **H3 Yun (氚云)**. AMTE operates the
-deployment; the contract's shape is the platform vendor's. It is recorded here with
-`x-operator: tenant` rather than as an API AMTE designed, markets or supports.
+## Advanced Materials Technology & Engineering on APIs.io
 
-- https://www.amteglobal.cn/
-- https://equityzen.com/company/advancedmaterialstechnologyengineering (secondary-market listing; not a company website)
+Everything profiled for Advanced Materials Technology & Engineering is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/advancedmaterialstechnologyengineering/](https://apis.io/providers/advancedmaterialstechnologyengineering/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Advanced Materials Technology & Engineering Object API](https://apis.io/apis/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-object-api/) — The Object API from Advanced Materials Technology & Engineering — 1 operation(s) for object.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Advancedmaterialstechnologyengineering Authentication](https://apis.io/security/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-authentication/)
+- [Advancedmaterialstechnologyengineering Domain Security](https://apis.io/security/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Advancedmaterialstechnologyengineering Plans Pricing](https://apis.io/plans/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Advancedmaterialstechnologyengineering Rate Limits](https://apis.io/rate-limits/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.amteglobal.cn/)
+- [Support](https://www.amteglobal.cn/econtact/32.html)
+- [Blog](https://www.amteglobal.cn/enews/31.html)
+
+## API Evangelist rating
+
+**Kin Score 18.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 36.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 18.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/advancedmaterialstechnologyengineering/](https://apis.io/providers/advancedmaterialstechnologyengineering/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Advanced Materials Technology & Engineering: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/advancedmaterialstechnologyengineering/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
