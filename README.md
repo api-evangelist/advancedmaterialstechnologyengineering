@@ -80,24 +80,30 @@ Everything profiled for Advanced Materials Technology & Engineering is published
 
 Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Advanced Materials Technology & Engineering API Rules](https://apis.io/rules/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-rules/)
+
 #### Security (2)
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Advancedmaterialstechnologyengineering Authentication](https://apis.io/security/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-authentication/)
-- [Advancedmaterialstechnologyengineering Domain Security](https://apis.io/security/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-domain-security/)
+- [Advanced Materials Technology & Engineering Authentication](https://apis.io/security/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-authentication/)
+- [Advanced Materials Technology & Engineering Domain Security](https://apis.io/security/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Advancedmaterialstechnologyengineering Plans Pricing](https://apis.io/plans/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-plans-pricing/)
+- [Advanced Materials Technology & Engineering Plans Pricing](https://apis.io/plans/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Advancedmaterialstechnologyengineering Rate Limits](https://apis.io/rate-limits/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-rate-limits/)
+- [Advanced Materials Technology & Engineering Rate Limits](https://apis.io/rate-limits/advancedmaterialstechnologyengineering/advancedmaterialstechnologyengineering-rate-limits/)
 
 ## Where to find this API
 
@@ -109,18 +115,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 18.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 20.2** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 66.1 |
-| Contract quality | 36.7 |
-| Contract governance | 0.0 |
+| Contract quality | 40.8 |
+| Contract governance | 13.6 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 19.0 |
 | Access clarity | 0.0 |
 
-**Agent readiness 18.0** — agent-aware
+**Agent readiness 17.6** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -143,8 +149,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/advancedmaterialstechnologyengineering/](https://apis.io/providers/advancedmaterialstechnologyengineering/).
 
